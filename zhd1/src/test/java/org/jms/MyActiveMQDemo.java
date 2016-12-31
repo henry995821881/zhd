@@ -12,8 +12,8 @@ public class MyActiveMQDemo {
     public static void main(String[] args) {  
         String url = "tcp://192.168.119.5:61616";  
         String user = "henry";  
-        String password = "123";  
-        String query = "MyQueue";  
+        String password = "123456";  
+        String query = "MyQueue3";  
         new Thread(new MessageReceiver(query,url,user,password), "Name-Receiver").start();  
         new Thread(new MessageSender(query,url,user,password), "Name-Sender").start();  
     }  
