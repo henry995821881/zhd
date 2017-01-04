@@ -13,7 +13,8 @@ public class RPCServer implements BizProtocol {
 
 	public static void main(String[] args) throws Exception {
 		Configuration conf = new Configuration();
-		Server server = new RPC.Builder(conf).setInstance(new RPCServer()).setProtocol(BizProtocol.class).setBindAddress("192.168.1.44").setPort(9527).build();
+		//Server server = new RPC.Builder(conf).setInstance(new RPCServer()).setProtocol(BizProtocol.class).setBindAddress("192.168.1.44").setPort(9527).build();
+		Server server = new RPC.Builder(conf).setInstance(new RPCServer()).setProtocol(BizProtocol.class).setBindAddress("localhost").setPort(9527).build();
 		
 		server.start();
 	}

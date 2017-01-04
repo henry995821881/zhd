@@ -11,9 +11,10 @@ public class RPCClient {
 
 	public static void main(String[] args) throws IOException {
 		Configuration conf = new Configuration();
-		BizProtocol proxy = (BizProtocol) RPC.getProxy( BizProtocol.class, 10010, new InetSocketAddress("192.168.1.44", 9527), conf);
+		//BizProtocol proxy = (BizProtocol) RPC.getProxy( BizProtocol.class, 10010, new InetSocketAddress("192.168.1.44", 9527), conf);
+		BizProtocol proxy = (BizProtocol) RPC.getProxy( BizProtocol.class, 10010, new InetSocketAddress("localhost", 9527), conf);
 		
-		String result = proxy.sayHi("tomcat");
+		String result = proxy.sayHi("tomcat-----------------------");
 		System.out.println(result);
 		RPC.stopProxy(proxy);
 	}

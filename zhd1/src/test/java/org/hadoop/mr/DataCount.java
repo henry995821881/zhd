@@ -21,6 +21,7 @@ public class DataCount {
 		Configuration conf = new Configuration();
 		
 		Job job = Job.getInstance(conf);
+
 		
 		job.setJarByClass(DataCount.class);
 		
