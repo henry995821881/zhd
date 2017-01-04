@@ -548,7 +548,7 @@
 			<version>5.0.0.Alpha2</version>
 		</dependency>
 
-<!-- 依赖hadoop -->
+<!--activeMQ 依赖hadoop -->
 		<dependency>
 			<groupId>org.apache.activemq</groupId>
 			<artifactId>activemq-core</artifactId>

@@ -1,6 +1,5 @@
 package org.hadoop.hdfs;
 
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,7 +20,8 @@ public class HDFSDemo {
 	
 	@Before
 	public void init() throws IOException, URISyntaxException, InterruptedException{
-		fs = FileSystem.get(new URI("hdfs://itcast01:9000"), new Configuration(), "root");
+		fs = FileSystem.get(new URI("hdfs://192.168.119.5:9000"), new Configuration(), "root");
+		System.out.println(fs);
 	}
 	
 	@Test
@@ -49,7 +49,7 @@ public class HDFSDemo {
 	}
 	
 	public static void main(String[] args) throws Exception {
-		FileSystem fs = FileSystem.get(new URI("hdfs://itcast01:9000"), new Configuration());
+		FileSystem fs = FileSystem.get(new URI("hdfs://192.168.119.5:9000"), new Configuration());
 		InputStream in = fs.open(new Path("/jdk.tar.gz"));
 		OutputStream out = new FileOutputStream("/home/jjj");
 		IOUtils.copyBytes(in, out, 4096, true);
